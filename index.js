@@ -2,13 +2,44 @@ import { print } from './js/lib.js';
 /* Refer to https://github.com/OleksiyRudenko/a-tiny-JS-world for the task details
    Complete the below for code reviewers' convenience:
 
-   Code repository: _put repo URL here_
-   Web app: _put project's github pages URL here_
+   Code repository: https://github.com/MosQuitO404/a-tiny-JS-world
+   Web app: https://mosquito404.github.io/a-tiny-JS-world/
    */
 
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
 
+const inhabitants = [
+
+   {species: 'dog',
+   name: 'Bayraktar',
+   gender: 'male',
+   legs: 4,
+   hands: 0,
+   saying: 'Death to the enemies!'},
+  
+   {species: 'cat',
+   name: 'Javelina',
+   gender: 'female',
+   legs: 4,
+   hands: 0,
+   saying: 'Glory to the Nation!'},
+ 
+   {species: 'human',
+   name: 'Orest',
+   gender: 'male',
+   legs: 2,
+   hands: 2,
+   saying: 'Glory to Ukraine!'},
+
+   {species: 'human',
+   name: 'Marichka',
+   gender: 'female',
+   legs: 2,
+   hands: 2,
+   saying: 'Glory to Heroes!'}
+
+];
 
 // ======== OUTPUT ========
 /* Use print(message) for output.
@@ -19,6 +50,10 @@ import { print } from './js/lib.js';
    so code reviewers might focus on a single file that is index.js.
    */
 
+   const inhabProp = ['species', 'name', 'gender', 'legs', 'hands', 'saying'];
+
+   print(inhabitants.map(obj => inhabProp.map(elem => obj[elem]).join('; ')).join('\n'));
+   
 /* Print examples:
    print('ABC');
    print('<strong>ABC</strong>');
